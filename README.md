@@ -35,14 +35,14 @@ Encryption Key Rotation Logic
 **Step 2**
 
 - Key 2 is marked as **active** in preparation for cert 1 rotation.
-- Key 1 remains in the ap registration but doesn't get used for encrypting new tokens.
+- Key 1 remains in the app registration but doesn't get used for encrypting new tokens.
 
-***API starts seeing a mix of old tokens encrypted with key 1 and new ones encrypted with key 2 - all works.***
+***API starts seeing a mix of old tokens encrypted with key 1, and new ones encrypted with key 2 - all works.***
 
 -------------------------------------------------------------------------------------------
 **Step 3** 
 
-- Cert 1 gets rotated and uplaoded to the app registration as key 1.
+- Cert 1 gets rotated and uploaded to the app registration as key 1.
 - Key 2 remains **active** for all token encryption.
 
 ***API picks up the new cert for key 1 and continues to see tokens encrypted with key 2 - all works.***
